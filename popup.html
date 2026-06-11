@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+  <div id="header">
+    <span class="title">Maps UTM Lead Finder</span>
+    <a id="brand" href="https://foxdigital.co.il" target="_blank" title="Built by Fox Digital">foxdigital.co.il</a>
+  </div>
+
+  <div id="controls">
+    <input type="text" id="businessType" placeholder="Business type, e.g. plumber, dentist, gym…" autocomplete="off">
+    <div class="btn-row">
+      <button id="scanBtn" class="btn-primary">Scan Current View</button>
+      <button id="stopBtn" class="btn-danger" disabled>Stop</button>
+    </div>
+  </div>
+
+  <div id="status-bar">
+    <span id="statusMsg">Open Google Maps, navigate to an area, then click Scan.</span>
+    <div id="progressWrap">
+      <div id="progressBar"></div>
+    </div>
+    <span id="progressLabel"></span>
+  </div>
+
+  <div id="results-area">
+    <div id="results-header">
+      <span id="resultsCount">No results yet</span>
+      <button id="exportBtn" class="btn-secondary" disabled>Export CSV</button>
+    </div>
+    <div id="tableWrap">
+      <table id="resultsTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Website</th>
+            <th>UTM</th>
+          </tr>
+        </thead>
+        <tbody id="resultsBody"></tbody>
+      </table>
+      <div id="emptyState">Results will appear here as each business is scanned.</div>
+    </div>
+  </div>
+
+  <div id="footer">
+    Built by <a href="https://foxdigital.co.il" target="_blank">Fox Digital</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
