@@ -3,7 +3,7 @@
   "name": "Maps UTM Lead Finder",
   "version": "1.0",
   "description": "Find businesses on Google Maps that have no UTM tracking on their listed website URL",
-  "permissions": ["storage", "scripting", "tabs"],
+  "permissions": ["storage", "tabs"],
   "host_permissions": [
     "https://www.google.com/maps/*",
     "https://maps.google.com/*"
